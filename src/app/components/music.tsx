@@ -64,7 +64,7 @@ export default function MusicPlayer() {
       />
 
       <div className="fixed top-4 right-4 z-50">
-        <button onClick={toggleMute}>
+        <button onClick={toggleMute} className="cursor-pointer">
           {isMuted ? "🔇" : "🔊"}
         </button>
       </div>
