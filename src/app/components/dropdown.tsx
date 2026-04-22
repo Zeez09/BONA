@@ -99,6 +99,26 @@ export default function Dropdown() {
     }, 100);
   };
 
+  const resumeMusic = () => {
+  const audio = document.getElementById("bg-music") as HTMLAudioElement;
+  if (!audio) return;
+
+  audio.play();
+  audio.volume = 0;
+
+  let volume = 0;
+
+  const fade = setInterval(() => {
+    if (volume < 0.95) {
+      volume += 0.05;
+      audio.volume = volume;
+    } else {
+      audio.volume = 1;
+      clearInterval(fade);
+    }
+  }, 100);
+};
+
   return (
     <div className="w-64 relative" ref={boxRef}>
       
@@ -171,7 +191,10 @@ export default function Dropdown() {
                 </video>
 
                 <button
-                  onClick={() => setShowMessage(false)}
+                  onClick={() => {
+                    setShowMessage(false);
+                    resumeMusic();
+                  }}
                   className="text-xs md:text-sm hover:text-black text-white px-4 py-2 rounded-full border cursor-pointer hover:bg-white"
                 >
                   close
