@@ -6,19 +6,24 @@ export function getRandomPoem(
 ) {
   const list = poems[mood];
 
+  // safety fallback (ONLY if mood is wrong)
   if (!list || list.length === 0) {
-    return "You are not your feelings, just someone moving through them.";
+    return "No poem found for this mood. Try selecting another mood.";
+  }
+
+  // if only 1 poem, just return it
+  if (list.length === 1) {
+    return list[0];
   }
 
   let index = Math.floor(Math.random() * list.length);
 
-  // ❗ prevent immediate repeat
-  if (list.length > 1) {
-    while (index === lastIndex[mood]) {
-      index = Math.floor(Math.random() * list.length);
-    }
+  // 🔥 prevent immediate repeat (simple + safe)
+  if (lastIndex[mood] !== undefined && index === lastIndex[mood]) {
+    index = (index + 1) % list.length;
   }
 
+  // store last used index
   lastIndex[mood] = index;
 
   return list[index];

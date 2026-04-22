@@ -1,5 +1,5 @@
 export const poems: Record<string, string[]> = {
-  happy: [
+  "happy 😊": [
     `Sunlight spills across your morning like it finally knows your name,  
 and everything that once felt heavy quietly learns how to behave.  
 There is a softness in the air today, like the world is exhaling slowly,  
@@ -48,7 +48,7 @@ And in this soft unfolding of calm and grace,
 you find yourself in a better space.`
   ],
 
-  sad: [
+  "sad 😢": [
     `There are nights that feel heavier than they should ever be,  
 like silence has learned how to sit inside your memory.  
 You move through hours that don’t feel like they belong to you,  
@@ -93,8 +93,7 @@ And somewhere beneath what feels lost and unclear,
 there is still a version of you that is here.  
 Not gone, not fading — just temporarily out of view.`
   ],
-
-  excited: [
+  "Excited 🤩": [
     `Something inside you is moving faster than thought,  
 like lightning trying to become everything it’s not.  
 Every second feels like it is about to break,  
@@ -131,7 +130,7 @@ And nothing about you wants to slow down,
 because everything is wearing a crown.`
   ],
 
-  tired: [
+  "Tired 😴": [
     `Your body feels like it has been carrying too much for too long,  
 like every movement is trying to stay strong.  
 Even thoughts arrive in slower tones,  
@@ -168,7 +167,7 @@ And you are allowed the same grace,
 to simply stop and rest in place.`
   ],
 
-  neutral: [
+  "Neutral 😐": [
     `You are standing where nothing pulls too hard,  
 not in the front, not on guard.  
 Everything passes through your view,  
@@ -242,6 +241,8 @@ And beneath all that you feel,
 there is still a calm that is real.`
   ],
 
+  
+
   "pregnant lizard 🤰": [
     `Even strange thoughts deserve their place,  
 like dreams that have no proper face.  
@@ -277,5 +278,7 @@ Even chaos has an end,
 where it slowly starts to bend.  
 And you remain, still and true,  
 through everything your mind goes through.`
-  ]
+  ],
+
+  
 };
