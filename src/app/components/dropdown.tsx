@@ -163,7 +163,7 @@ export default function Dropdown() {
 
                 <video
                   controls
-                  className="w-full rounded-xl h-30 md:h-60 "
+                  className="w-full rounded-xl h-40 md:h-60 "
                   onPlay={fadeOutAudio}
                   onEnded={fadeInAudio}
                 >
